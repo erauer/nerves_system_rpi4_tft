@@ -46,8 +46,11 @@ dtoverlay=ramoops
 enable_uart=1
 
 # Enable DRM VC4 V3D driver on top of the dispmanx display stack
-dtoverlay=vc4-fkms-v3d
+dtoverlay=vc4-kms-v3d-pi4
 max_framebuffers=2
+
+# Enable Adafruit Pi TFT 3.5
+dtoverlay=pitft35-resistive
 
 [cm4]
 # Raspberry Pi CM4-only settings
