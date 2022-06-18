@@ -2,7 +2,7 @@ use Mix.Config
 
 # Repository specific configuration
 
-platform = "rpi4"
+platform = "rpi4_tft"
 arch = "arm"
 
 app_part_devparth = "/dev/mmcblk0p3"
