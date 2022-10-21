@@ -1,7 +1,7 @@
 defmodule NervesSystemRpi4TFT.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
+  @github_organization "erauer"
   @app :nerves_system_rpi4_tft
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
@@ -43,7 +43,7 @@ defmodule NervesSystemRpi4TFT.MixProject do
       type: :system,
       artifact_sites: [
         {:github_releases, "#{@github_organization}/#{@app}"},
-        {:prefix, "https://download.rauer.dev/nerves/"}
+        {:prefix, "https://archive.rauer.dev/nerves/"}
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
@@ -67,9 +67,9 @@ defmodule NervesSystemRpi4TFT.MixProject do
 
   defp deps do
     [
-      {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.15", runtime: false},
-      {:nerves_system_br, "1.20.1", runtime: false},
-      {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 1.5.0", runtime: false},
+      {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.15 or ~> 1.8.0", runtime: false},
+      {:nerves_system_br, "1.20.4", runtime: false},
+      {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 1.6.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
