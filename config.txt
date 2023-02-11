@@ -29,6 +29,25 @@ dtparam=i2c_arm=on
 dtparam=spi=on
 dtparam=audio=on
 
+# Automatically load overlays for detected cameras
+camera_auto_detect=1
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+
+# Enable DRM VC4 V3D driver
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+
+# PiTFT Plus 480x320 3.5
+dtoverlay=pitft35-resistive,rotate=90,speed=20000000,fps=20
+
+# Disable compensation for displays with overscan
+disable_overscan=1
+
 # Comment this in or modify to enable OneWire
 # NOTE: check that the overlay that you specify is in the boot partition or
 #       this won't work.
@@ -44,20 +63,9 @@ dtoverlay=ramoops
 # Enable the UART (/dev/ttyS0)
 enable_uart=1
 
-# Automatically load overlays for detected DSI displays
-display_auto_detect=1
-
-
-# Enable DRM VC4 V3D driver on top of the dispmanx display stack
-dtoverlay=vc4-fkms-v3d
-max_framebuffers=2
-
-# PiTFT Plus 480x320 3.5
-dtoverlay=pitft35-resistive,rotate=90,speed=20000000,fps=20
-
 [cm4]
 # Raspberry Pi CM4-only settings
 
 # For the CM4 I/O board, USB is disabled by default. This enables it.
-/* dtoverlay=dwc2,dr_mode=host */
+dtoverlay=dwc2,dr_mode=host 
 
