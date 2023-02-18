@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-FLUTTER_PI_VERSION = 6ecae4abbde6a422781883030a0553c7efde6195 
+FLUTTER_PI_VERSION = 757029e614f8845f64e5c82617b3eb71ef8e4e8b
 
 FLUTTER_PI_LICENSE = MIT
 
