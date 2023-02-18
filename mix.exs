@@ -1,8 +1,8 @@
-defmodule NervesSystemRpi4TFT.MixProject do
+defmodule NervesSystemRpi4Weston.MixProject do
   use Mix.Project
 
   @github_user "erauer"
-  @app :nerves_system_rpi4_tft
+  @app :nerves_system_rpi4_weston
   @source_url "https://github.com/#{@github_user}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -116,7 +116,9 @@ defmodule NervesSystemRpi4TFT.MixProject do
       "post-createfs.sh",
       "ramoops.dts",
       "README.md",
-      "VERSION"
+      "VERSION",
+      "Config.in",
+      "package"
     ]
   end
 
