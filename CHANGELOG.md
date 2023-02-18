@@ -12,6 +12,89 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.22.0
+
+This is a Buildroot version update that appears to mostly contain bug and
+security fixes. It should be a low risk upgrade from v1.21.2.
+
+* Updated dependencies
+  * [nerves_system_br v1.22.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.22.1)
+  * [Buildroot 2022.11](http://lists.busybox.net/pipermail/buildroot/2022-December/656980.html)
+  * GCC 12.2
+
+## v1.21.2
+
+* Changes
+  * Two Buildroot patch updates and an Erlang minor version update
+  * Nerves Heart v2.0 is now included. Nerves Heart connects the Erlang runtime
+    to a hardware watchdog. v2.0 has numerous updates to improve information
+    that you can get and also has more safeguards to avoid conditions that could
+    cause a device to hang forever.
+
+* Updated dependencies
+  * linux 5.15.78 (RPi 1.20221104)
+  * [nerves_system_br v1.21.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.6)
+  * [Erlang/OTP 25.2](https://erlang.org/download/OTP-25.2.README)
+  * [Buildroot 2022.08.3](https://lore.kernel.org/buildroot/87r0x7z5cw.fsf@dell.be.48ers.dk/T/#u)
+  * [nerves_heart v2.0.2](https://github.com/nerves-project/nerves_heart/releases/tag/v2.0.2)
+
+## v1.21.1
+
+* Changes
+  * Fix regression when building on x86_64 Linux where wrong toolchain was used.
+  * Reduce first-time Linux kernel download by using tarball source
+
+* Updated dependencies
+  * [nerves_system_br v1.21.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.2)
+  * [Erlang/OTP 25.1.2](https://erlang.org/download/OTP-25.1.2.README)
+
+## v1.21.0
+
+This release includes a major change to the display drivers by switching to the
+full KMS drivers. Raspberry Pi OS has been using these and they appear to be a
+big improvement over the fake KMS ones. This might cause some application
+changes or updates if you're using the display.
+
+* Changes
+  * Switch from using the fake KMS to full KMS device drivers for using the
+    display. See [PR #155](https://github.com/nerves-project/nerves_system_rpi4/pull/155).
+  * Support aarch64 Linux builds
+  * Add libdtc to support runtime loading of device tree overlays
+
+* Updated dependencies
+  * [nerves_system_br v1.21.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.1)
+    and also see [nerves_system_br v1.21.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.21.0)
+  * [Buildroot 2022.08.1](http://lists.busybox.net/pipermail/buildroot/2022-October/652816.html)
+  * [Erlang/OTP 25.1.1](https://erlang.org/download/OTP-25.1.1.README)
+
+## v1.20.2
+
+* Updated dependencies
+  * [nerves_system_br v1.20.6](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.6)
+  * [Erlang/OTP 25.0.4](https://erlang.org/download/OTP-25.0.4.README)
+  * [Buildroot 2022.05.2](http://lists.busybox.net/pipermail/buildroot/2022-August/650546.html)
+  * Also see [Buildroot 2022.05.1 changes](http://lists.busybox.net/pipermail/buildroot/2022-July/647814.html)
+
+## v1.20.1
+
+* Updated dependencies
+  * [nerves_system_br v1.20.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.4)
+  * [Erlang/OTP 25.0.3](https://erlang.org/download/OTP-25.0.3.README)
+
+## v1.20.0
+
+This release updates to Buildroot 2022.05, Linux 5.15.32 (from Linux 5.10) and
+uses GCC 11.3 (from GCC 10.3). The Linux kernel upgrade could introduce a
+regression, so please verify hardware-specific functionality in your firmware.
+
+If you have cloned this repository for a custom system, please make sure that
+you have `CONFIG_NOP_USB_XCEIV=y` in your Linux kernel configuration.
+
+* Updated dependencies
+  * [nerves_system_br v1.20.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.20.3)
+  * [Buildroot 2022.05](http://lists.busybox.net/pipermail/buildroot/2022-June/644349.html)
+  * [Erlang/OTP 25.0.2](https://erlang.org/download/OTP-25.0.2.README)
+
 ## v1.19.0
 
 This release updates to Buildroot 2022.02.1 and OTP 25.0. While this should be
