@@ -1,0 +1,14 @@
+diff --git CMakeLists.txt CMakeLists.txt
+index 41bd406..681ddb5 100644
+--- a/CMakeLists.txt
++++ a/CMakeLists.txt
+@@ -139,7 +139,7 @@ target_link_libraries(flutter-pi
+   ${EGL_LDFLAGS}
+   ${GLESV2_LDFLAGS}
+   EGL
+-  systemd #${LIBSYSTEMD_LDFLAGS}
++  ${LIBSYSTEMD_LDFLAGS}
+   input #${LIBINPUT_LDFLAGS}
+   xkbcommon #${LIBUDEV_LDFLAGS}
+   udev #${LIBXKBCOMMON_LDFLAGS}
+
