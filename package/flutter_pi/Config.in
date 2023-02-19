@@ -1,0 +1,4 @@
+config BR2_PACKAGE_FLUTTER_PI
+	bool "flutter_pi"
+  select BR2_PACKAGE_LIBUEV
+
