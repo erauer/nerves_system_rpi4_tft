@@ -116,9 +116,7 @@ defmodule NervesSystemRpi4Weston.MixProject do
       "post-createfs.sh",
       "ramoops.dts",
       "README.md",
-      "VERSION",
-      "Config.in",
-      "package"
+      "VERSION"
     ]
   end
 
