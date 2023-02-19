@@ -1,4 +1,4 @@
-# Raspberry Pi 4 Model B (64-bit)
+# Raspberry Pi 4 Model B (64-bit) Weston variant
 
 [![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_rpi4.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_rpi4)
 [![Hex version](https://img.shields.io/hexpm/v/nerves_system_rpi4.svg "Hex version")](https://hex.pm/packages/nerves_system_rpi4)
